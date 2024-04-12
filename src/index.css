@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'YekanBakhNoEn-Regular';
+  src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/Webfonts/fonts/woff2/YekanBakhNoEn-Regular.woff2) format('woff2'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/Webfonts/fonts/woff/YekanBakhNoEn-Regular.woff) format('woff'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/TTF/YekanBakhNoEn-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'YekanBakhNoEn-SemiBold';
+  src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/Webfonts/fonts/woff2/YekanBakhNoEn-SemiBold.woff2) format('woff2'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/Webfonts/fonts/woff/YekanBakhNoEn-SemiBold.woff) format('woff'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/TTF/YekanBakhNoEn-SemiBold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum-SemiBold';
+  src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff2/YekanBakhFaNum-SemiBold.woff2) format('woff2'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff/YekanBakhFaNum-SemiBold.woff) format('woff'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/TTF/YekanBakhFaNum-SemiBold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum-Bold';
+  src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff2/YekanBakhFaNum-Bold.woff2) format('woff2'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff/YekanBakhFaNum-Bold.woff) format('woff'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/TTF/YekanBakhFaNum-Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'YekanBakhNoEn-Bold';
+  src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/Webfonts/fonts/woff2/YekanBakhNoEn-Bold.woff2) format('woff2'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/Webfonts/fonts/woff/YekanBakhNoEn-Bold.woff) format('woff'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/TTF/YekanBakhNoEn-Bold.ttf) format('ttf');
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size root => 16px*0.625 = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  /* width: 100vw; */
+}

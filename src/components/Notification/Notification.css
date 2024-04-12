@@ -1,0 +1,57 @@
+.notification {
+  max-width: 100vw;
+
+  position: absolute;
+  left: 50%;
+  top: -10rem;
+  z-index: 3;
+  transform: translate(-50%, 0px);
+
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #1cdd27;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  .message {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'YekanBakhFaNum-SemiBold', sans-serif, serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    text-align: right;
+    direction: rtl;
+    padding: 0.55rem;
+
+    .icon-close-notification {
+      height: 2rem;
+      width: 2rem;
+
+      font-size: 2rem;
+      margin-right: 0.3rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+
+  .time-out-bar {
+    width: 100%;
+    height: 0.4rem;
+    background-color: blue;
+
+    transition: all 3s linear;
+  }
+}
+
+.notification-show {
+  top: 10rem;
+}

@@ -1,0 +1,9 @@
+.page-plp {
+  .body {
+    /* width: 360px; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-right: 1.6rem;
+  }
+}

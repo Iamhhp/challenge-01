@@ -1,0 +1,391 @@
+.card {
+  width: 15.6rem;
+  height: 37.1rem;
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+
+  margin: 0.5rem 0rem;
+  margin-left: 1.6rem;
+
+  .amazing-time {
+    width: 100%;
+    height: 1.6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 0.4rem;
+
+    .text {
+      font-family: 'YekanBakhNoEn-Bold';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.6rem;
+      /* identical to box height */
+      text-align: right;
+
+      color: #ed2e7e;
+    }
+
+    .time {
+      font-family: 'YekanBakhFaNum-Bold';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.6rem;
+      /* identical to box height */
+      text-align: right;
+
+      color: #ed2e7e;
+    }
+  }
+
+  .show-models {
+    position: relative;
+
+    .my-swiper-models {
+      width: 14.8rem;
+      height: 20rem;
+      border-radius: 0.6rem;
+
+      .swiper-slide {
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 0.6rem;
+          overflow: hidden;
+        }
+      }
+
+      .swiper-pagination {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        bottom: 0.8rem !important;
+        left: 0.8rem !important;
+
+        .swiper-pagination-bullet {
+          width: 0.4rem;
+          height: 0.4rem;
+
+          opacity: 1;
+          padding: 0px;
+          margin: 0.2rem !important;
+          border: 0.05rem solid black;
+          background-color: white;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: black;
+        }
+      }
+    }
+
+    .btn-add-basket {
+      width: 2.8rem;
+      height: 2.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      right: 0.8rem;
+      bottom: 0.8rem;
+      border-radius: 50%;
+      z-index: 1;
+
+      cursor: pointer;
+      background-color: white;
+
+      .icon {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+  }
+
+  .title {
+    width: 14.8rem;
+    height: 3.4rem;
+
+    font-family: 'YekanBakhNoEn-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    direction: rtl;
+    text-align: justify;
+    color: #292d32;
+    overflow: hidden;
+    text-overflow: clip;
+
+    color: #292d32;
+
+    margin-top: 0.8rem;
+  }
+
+  .upcoming-product {
+    margin-top: 0.8rem;
+    margin-bottom: 5.7rem;
+
+    .coming {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      font-family: 'YekanBakhNoEn-SemiBold';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.7rem;
+      /* identical to box height */
+      direction: rtl;
+      text-align: right;
+      letter-spacing: -0.05rem;
+
+      color: #b0b0b0;
+
+      .icon {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+
+    .available-notification {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      font-family: 'Yekan Bakh NoEn';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.7rem;
+      /* identical to box height */
+      direction: rtl;
+      text-align: right;
+      letter-spacing: -0.05rem;
+      color: #168fdf;
+
+      margin-top: 0.5rem;
+    }
+  }
+
+  .brand-palettes {
+    height: 2.6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    direction: rtl;
+    margin-top: 1rem;
+
+    position: relative;
+
+    .my-swiper-palettes {
+      .swiper-slide {
+        width: fit-content !important;
+
+        .palette {
+          width: 2rem;
+          height: 2rem;
+          padding: 0.1rem;
+          cursor: pointer;
+
+          flex-grow: 0;
+          flex-shrink: 0;
+          margin-left: 0.6rem;
+          border-radius: 2rem;
+          border: 0.1rem solid #c8c8c8;
+        }
+
+        .palette-active {
+          border-color: #ed2e7e;
+        }
+
+        .is-exit-basket {
+          content: '';
+          display: block;
+          width: 0.3rem;
+          height: 0.3rem;
+
+          margin-right: 0.85rem;
+          margin-top: 0.3rem;
+          border-radius: 50%;
+          background-color: #168fdf;
+        }
+      }
+    }
+
+    .blur-right {
+      width: 1rem;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+
+      background: linear-gradient(to right, white, transparent);
+    }
+  }
+
+  .rate-delivery {
+    width: 100%;
+    height: 1.6rem;
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+
+    .free-delivery {
+      display: flex;
+      align-items: center;
+
+      .text {
+        font-family: 'YekanBakhNoEn-SemiBold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        /* identical to box height */
+        text-align: right;
+        letter-spacing: -0.04rem;
+        color: #00b31d;
+
+        margin-right: 0.3rem;
+      }
+
+      .icon {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    .rate {
+      display: flex;
+      align-items: center;
+
+      .number {
+        font-family: 'YekanBakhFaNum-SemiBold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        text-align: left;
+
+        color: #2f2f2f;
+
+        margin-left: 0.2rem;
+      }
+
+      .icon {
+        width: 0.7rem;
+        height: 0.675rem;
+      }
+    }
+
+    .stuck-product {
+      display: flex;
+      align-items: center;
+
+      .text {
+        font-family: 'YekanBakhFaNum-SemiBold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+        /* identical to box height */
+        text-align: right;
+        letter-spacing: -0.05rem;
+        color: #ed2e7e;
+
+        margin-right: 0.3rem;
+      }
+
+      .icon {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+    }
+  }
+
+  .price {
+    .main-price {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 0.4rem;
+      margin-bottom: -0.2rem;
+
+      .number {
+        font-family: 'YekanBakhFaNum-SemiBold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        /* identical to box height */
+        text-align: center;
+        letter-spacing: -0.1rem;
+        color: #ed2e7e;
+      }
+
+      .unit {
+        font-family: 'YekanBakhNoEn-SemiBold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        text-align: center;
+        color: #2f2f2f;
+
+        margin-right: 0.2rem;
+      }
+    }
+
+    .discount-price {
+      width: 100%;
+      height: 1.7rem;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 0.4rem;
+
+      .number {
+        font-family: 'YekanBakhFaNum-SemiBold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        /* identical to box height */
+        text-align: center;
+        letter-spacing: -0.1rem;
+        text-decoration-line: line-through;
+
+        color: #bcbcbc;
+      }
+
+      .discount {
+        font-family: 'YekanBakhFaNum-SemiBold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        /* identical to box height */
+        text-align: right;
+        color: #ed2e7e;
+
+        margin-right: 0.4rem;
+      }
+    }
+  }
+}

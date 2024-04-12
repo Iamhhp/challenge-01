@@ -1,0 +1,285 @@
+.overlay-sizing {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .menu-sizing {
+    width: 100%;
+    /* width: 36rem; */
+    /* height: 42.9rem; */
+    height: 46.9rem;
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 3;
+
+    background-color: #ffffff;
+    border-radius: 2rem 2rem 0rem 0rem;
+
+    transform: translateY(100%);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+
+    .title {
+      width: fit-content;
+      margin: 1.6rem 1.6rem 1.6rem 0rem;
+      margin-left: auto;
+
+      font-family: 'YekanBakhNoEn-SemiBold';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      text-align: center;
+      letter-spacing: -0.05rem;
+      color: #292d32;
+    }
+
+    .line {
+      width: 32.8rem;
+      height: 0.1rem;
+      margin: auto;
+      background-color: #f3f3f3;
+    }
+
+    .sizing-coloring {
+      width: 100%;
+      height: 33.7rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: center;
+
+      overflow: hidden;
+      padding: 1.8rem 1.6rem 0rem 1.6rem;
+
+      .sizing {
+        display: grid;
+        grid-template-columns: repeat(3, 8rem);
+        gap: 1.6rem 4.4rem;
+
+        direction: rtl;
+        text-align: right;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        .size {
+          width: fit-content;
+          height: fit-content;
+
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: flex-start;
+          align-items: flex-end;
+          direction: ltr;
+
+          .num-size {
+            .title {
+              font-family: 'YekanBakhNoEn-Regular';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1rem;
+              line-height: 1.6rem;
+              text-align: right;
+              letter-spacing: -0.05rem;
+              color: #8f8f8f;
+
+              margin: 0px;
+            }
+
+            .number {
+              font-family: 'YekanBakhFaNum-SemiBold';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.1rem;
+              line-height: 1.6rem;
+              text-align: right;
+              letter-spacing: -0.05rem;
+
+              color: #2f2f2f;
+            }
+          }
+
+          .weight-size {
+            font-family: 'YekanBakhFaNum-SemiBold';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.6rem;
+            /* identical to box height */
+            text-align: right;
+            letter-spacing: -0.05rem;
+
+            .title {
+              color: #8f8f8f;
+              margin: 0px;
+            }
+
+            .weight {
+              color: #2f2f2f;
+            }
+          }
+
+          .add-size {
+            width: 8rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            border-radius: 0.8rem;
+            background-color: #ed303d;
+
+            .num-basket {
+              width: 3.2rem;
+              height: 3.2rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              font-family: 'YekanBakhFaNum-SemiBold';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.2rem;
+              /* line-height: 1.6rem; */
+              /* identical to box height */
+              text-align: right;
+              letter-spacing: -0.05rem;
+              color: #ed303d;
+
+              border-radius: 50%;
+              background-color: #ffffff;
+            }
+          }
+        }
+      }
+
+      /* hide element sizing */
+      .hide {
+        transform: translateX(100vw);
+      }
+
+      .coloring {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        margin-bottom: 3rem;
+
+        .title {
+          font-family: 'YekanBakhNoEn-SemiBold';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 1.3rem;
+          line-height: 2rem;
+          text-align: center;
+          letter-spacing: -0.05rem;
+
+          color: #292d32;
+
+          margin: 0px;
+          padding: 0px;
+        }
+
+        .colors {
+          width: 29.2rem;
+          height: 5rem;
+
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          direction: rtl;
+
+          padding: 0.4rem 0.8rem;
+          margin-right: 1.2rem;
+          border-radius: 2.2rem;
+          background: #f9f9f9;
+
+          .color-1,
+          .color-2,
+          .color-3 {
+            width: 6.4rem;
+            height: 3.6rem;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            position: relative;
+
+            border-radius: 1.8rem;
+            background-color: #f4f4f4;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+            .icon {
+              width: 1.6rem;
+              height: 1.6rem;
+              margin-left: 0.4rem;
+            }
+
+            .color-name {
+              font-family: 'YekanBakhNoEn-Regular';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.2rem;
+              line-height: 1.9rem;
+              /* identical to box height */
+              text-align: right;
+              letter-spacing: -0.05rem;
+
+              color: #8f8f8f;
+            }
+
+            .is-exist-basket {
+              width: 0.4rem;
+              height: 0.4rem;
+              border-radius: 50%;
+
+              position: absolute;
+              bottom: -1.3rem;
+              left: 3rem;
+              background-color: #168fdf;
+            }
+          }
+
+          .color-active {
+            background: #ffffff;
+            box-shadow: 0px 0px 4px rgba(152, 143, 143, 0.3);
+          }
+        }
+      }
+    }
+
+    .btn-close {
+      all: unset;
+      width: 100%;
+      height: 4rem;
+      box-sizing: border-box;
+      cursor: pointer;
+
+      font-family: 'YekanBakhNoEn-SemiBold';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      text-align: center;
+      letter-spacing: -0.05rem;
+      color: #2f2f2f;
+
+      border-top: 0.1rem solid #f3f3f3;
+    }
+  }
+
+  .show {
+    transform: translateY(4rem);
+  }
+}
