@@ -9,12 +9,12 @@ import iconBoxOpen from './../../assets/icons/system-uicons_box-open.svg';
 import iconAddBasket from './../../assets/icons/add-basket.svg';
 import iconTimer from './../../assets/icons/timer.svg';
 import iconNotification from './../../assets/icons/notification.svg';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { memo, useState } from 'react';
 import { changeSelectedBrandPalette } from '../../context/dataProductsSlice';
 import MenuProductSizingColor from '../MenuProductSizingColor/MenuProductSizingColor';
 
-const Card = ({ id: idProductSelected, amazingTime, models, title, upcomingProduct, brandPalettes, rate, isFreeDelivery, stockProduct, price, discountPrice, modelsColoring }) => {
+const Card = ({ id: idProductSelected, amazingTime, models, title, upcomingProduct, brandPalettes, rate, isFreeDelivery, stockProduct, price, discountPrice }) => {
   const [isShowMenuProduct, setIsShowMenuProduct] = useState(false);
 
   const clickHandlerAddProductBasket = () => {
@@ -122,14 +122,16 @@ const Card = ({ id: idProductSelected, amazingTime, models, title, upcomingProdu
         )}
       </div>
 
-      {isShowMenuProduct && <MenuProductSizingColor {...{ setIsShowMenuProduct, idProductSelected, modelsColoring }} />}
+      {isShowMenuProduct && <MenuProductSizingColor {...{ setIsShowMenuProduct, idProductSelected }} />}
     </>
   );
 };
 export default memo(Card);
 
-const BrandPalette = ({ id: idBrandPalette, idProductSelected, color, isSelected, isExistBasket }) => {
+const BrandPalette = ({ id: idBrandPalette, idProductSelected, img, color, isSelected }) => {
   const setSelectedBrandPalette = useDispatch();
+  const dataProductsBasket = useSelector((state) => state.dataProductsBasket);
+  const isExistBasket = dataProductsBasket.find((product) => product.id === idProductSelected)?.brandPalettes.find((palette) => palette.id === idBrandPalette)?.isExistBasket;
 
   const clickHandlerBrandPalette = () => {
     setSelectedBrandPalette(changeSelectedBrandPalette({ idBrandPalette, idProductSelected }));
@@ -137,7 +139,9 @@ const BrandPalette = ({ id: idBrandPalette, idProductSelected, color, isSelected
 
   return (
     <>
-      <div className={`palette ${isSelected && 'palette-active'}`} style={{ background: color, backgroundClip: 'content-box' }} onClick={clickHandlerBrandPalette} />
+      <div className={`palette ${isSelected && 'palette-active'}`} style={{ background: color, backgroundClip: 'content-box' }} onClick={clickHandlerBrandPalette}>
+        {img && <img src={img} alt='' />}
+      </div>
       {isExistBasket && <div className='is-exit-basket' />}
     </>
   );

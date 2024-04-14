@@ -20,7 +20,7 @@
     z-index: 3;
 
     transform: translateY(100%);
-    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.2s linear;
 
     padding-top: 1.6rem;
     border-radius: 2rem 2rem 0rem 0rem;

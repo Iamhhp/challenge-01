@@ -4,17 +4,30 @@ import { memo, useEffect, useRef, useState } from 'react';
 import ItemMeter from '../ItemMeter/ItemMeter';
 import { useSelector } from 'react-redux';
 
-const MenuProductSizingColor = ({ idProductSelected, setIsShowMenuProduct, modelsColoring }) => {
+const MenuProductSizingColor = ({ idProductSelected, setIsShowMenuProduct }) => {
+  const dataProductSelected = useSelector((state) => state.dataProducts.find((product) => product.id === idProductSelected));
+  const { modelsColoring, brandPalettes } = dataProductSelected;
+  const { id: idBrandPaletteSelected } = brandPalettes.find((brandPalette) => brandPalette.isSelected);
+  const [propsItemMeterDataSelected, setPropsItemMeterDataSelected] = useState({
+    idProductSelected,
+    idBrandPaletteSelected,
+    idModelColorSelected: -1,
+    idColorSizeSelected: -1,
+    number: -1,
+    stock: -1,
+  });
   const [modelColor, setModelColor] = useState(modelsColoring[0]);
+  const elementOverlay = useRef(null);
   const elementMenuSizing = useRef(null);
   const elementBoxSizing = useRef(null);
-  const [isShowItemMeter, setIsShowItemMeter] = useState('');
+  const [isShowItemMeter, setIsShowItemMeter] = useState(false);
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // #region Auto Show-MenuProduct in First Rending
   useEffect(() => {
     const timerId = window.setTimeout(() => {
       elementMenuSizing.current?.classList.add('show');
+      elementOverlay.current?.classList.add('show');
     }, 10);
 
     return () => {
@@ -27,14 +40,15 @@ const MenuProductSizingColor = ({ idProductSelected, setIsShowMenuProduct, model
   const clickHandlerHideMenuProduct = (e) => {
     e.stopPropagation();
     const target = e.target.className;
-    if (target !== 'overlay-sizing' && target !== 'btn-close') {
+    if (target !== 'overlay-sizing show' && target !== 'btn-close') {
       return;
     }
 
     elementMenuSizing.current.classList.remove('show');
+    elementOverlay.current.classList.remove('show');
     window.setTimeout(() => {
       setIsShowMenuProduct(() => false);
-    }, 400);
+    }, 200);
   };
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -49,22 +63,9 @@ const MenuProductSizingColor = ({ idProductSelected, setIsShowMenuProduct, model
     }
   }, [isShowItemMeter]);
 
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // #region  Effect Element Model Size
-  useEffect(() => {
-    elementBoxSizing.current?.classList.add('hide');
-    const timerId = window.setTimeout(() => {
-      elementBoxSizing.current?.classList.remove('hide');
-    }, 300);
-
-    return () => {
-      window.clearTimeout(timerId);
-    };
-  }, [modelColor]);
-
   return (
     <>
-      <div className='overlay-sizing' onClick={clickHandlerHideMenuProduct}>
+      <div className='overlay-sizing' onClick={clickHandlerHideMenuProduct} ref={elementOverlay}>
         <div className='menu-sizing' ref={elementMenuSizing}>
           <div className='title'>انتخاب تعداد و اندازه مدنظر</div>
           <p className='line' />
@@ -72,7 +73,7 @@ const MenuProductSizingColor = ({ idProductSelected, setIsShowMenuProduct, model
           <div className='sizing-coloring'>
             <div className='sizing' ref={elementBoxSizing}>
               {modelColor.colorSizing?.map((colorSize) => (
-                <BoxSize key={colorSize.id} {...colorSize} {...{ idProductSelected, idModelColorSelected: modelColor.id, elementMenuSizing, setIsShowItemMeter }} />
+                <BoxSize key={colorSize.id} {...colorSize} {...{ idProductSelected, idModelColorSelected: modelColor.id, elementMenuSizing, setPropsItemMeterDataSelected, setIsShowItemMeter }} />
               ))}
             </div>
 
@@ -93,8 +94,14 @@ const MenuProductSizingColor = ({ idProductSelected, setIsShowMenuProduct, model
         </div>
       </div>
 
-      {/*  isShowItemMeter  => {idModelColor,idColorSize}  */}
-      {isShowItemMeter !== '' && <ItemMeter {...{ setIsShowItemMeter, idProductSelected, ...isShowItemMeter }} />}
+      {/*  propsItemMeterDataSelected => 
+      { idProductSelected,
+        idBrandPaletteSelected,
+        idModelColorSelected: -1,
+        idColorSizeSelected: -1,
+        number: -1,
+        stock: -1,}  */}
+      {isShowItemMeter && <ItemMeter {...{ setIsShowItemMeter, ...propsItemMeterDataSelected }} />}
     </>
   );
 };
@@ -102,17 +109,24 @@ export default memo(MenuProductSizingColor);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //#region Component BoxSize
-const BoxSize = ({ id: idColorSizeSelected, idProductSelected, idModelColorSelected, size, weight, stock, elementMenuSizing, setIsShowItemMeter }) => {
+const BoxSize = ({ id: idColorSizeSelected, idProductSelected, idModelColorSelected, size, weight, stock, elementMenuSizing, setPropsItemMeterDataSelected, setIsShowItemMeter }) => {
   const dataProductGoal = useSelector((state) => state.dataProductsBasket.find((product) => product.id === idProductSelected));
   const number = !dataProductGoal ? 0 : dataProductGoal.modelsColoring[idModelColorSelected - 1].colorSizing[idColorSizeSelected - 1].number;
 
   const clickHandlerShowItemMeter = () => {
     elementMenuSizing.current.classList.remove('show');
     window.setTimeout(() => {
-      setIsShowItemMeter(() => {
-        return { idModelColorSelected, idColorSizeSelected, number, stock };
+      setPropsItemMeterDataSelected((prevState) => {
+        return {
+          ...prevState,
+          idModelColorSelected,
+          idColorSizeSelected,
+          number,
+          stock,
+        };
       });
-    }, 400);
+      setIsShowItemMeter(() => true);
+    }, 200);
   };
 
   return (

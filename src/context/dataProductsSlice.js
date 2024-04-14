@@ -1,20 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import model11 from './../assets/imgs/1-1.jpg';
-import model12 from './../assets/imgs/1-2.jpg';
-import model13 from './../assets/imgs/1-3.jpg';
-import model14 from './../assets/imgs/1-4.jpg';
-import model21 from './../assets/imgs/2-1.jpg';
-import model22 from './../assets/imgs/2-2.jpg';
-import model23 from './../assets/imgs/2-3.jpg';
-import model24 from './../assets/imgs/2-4.jpg';
-import model31 from './../assets/imgs/3-1.jpg';
-import model32 from './../assets/imgs/3-2.jpg';
-import model33 from './../assets/imgs/3-3.jpg';
-import model34 from './../assets/imgs/3-4.jpg';
-import model41 from './../assets/imgs/4-1.jpg';
-import model42 from './../assets/imgs/4-2.jpg';
-import model43 from './../assets/imgs/4-3.jpg';
-import model44 from './../assets/imgs/4-4.jpg';
+import model1 from './../assets/imgs/model-1.png';
+import model2 from './../assets/imgs/model-2.png';
+import model3 from './../assets/imgs/model-3.png';
+import model4 from './../assets/imgs/model-4.png';
+import circle1 from './../assets/imgs/circle-1.png';
+import circle2 from './../assets/imgs/circle-2.png';
+import circle3 from './../assets/imgs/circle-3.png';
+import circle4 from './../assets/imgs/circle-4.png';
+import circle5 from './../assets/imgs/circle-5.png';
 import iconColorYellow from './../assets/icons/iconColorYellow.svg';
 import iconColorWhite from './../assets/icons/iconColorWhite.svg';
 import iconColorPurple from './../assets/icons/iconColorPurple.svg';
@@ -24,24 +17,24 @@ const initialState = [
     id: 1,
     amazingTime: '',
     models: [
-      { id: 1, img: model11, isExistBasket: true },
-      { id: 2, img: model12, isExistBasket: false },
-      { id: 3, img: model13, isExistBasket: false },
-      { id: 4, img: model14, isExistBasket: true },
+      { id: 1, img: model1 },
+      { id: 2, img: model2 },
+      { id: 3, img: model3 },
+      { id: 4, img: model4 },
     ],
     title: 'کراپ‌تاپ آستین بلند زنانه ماییلدا مدل 4423-437 رنگ مشکی ...',
     upcomingProduct: false,
     brandPalettes: [
-      { id: 1, color: '#FF0000', isExistBasket: true, isSelected: true },
-      { id: 2, color: '#00FF00', isExistBasket: false, isSelected: false },
-      { id: 3, color: '#0000FF', isExistBasket: true, isSelected: false },
-      { id: 4, color: '#FFFF00', isExistBasket: false, isSelected: false },
-      { id: 5, color: '#FF00FF', isExistBasket: true, isSelected: false },
-      { id: 6, color: '#00FFFF', isExistBasket: false, isSelected: false },
-      { id: 7, color: '#800000', isExistBasket: true, isSelected: false },
-      { id: 8, color: '#008000', isExistBasket: false, isSelected: false },
-      { id: 9, color: '#000080', isExistBasket: true, isSelected: false },
-      { id: 10, color: '#808080', isExistBasket: false, isSelected: false },
+      { id: 1, color: '#FF0000', isSelected: true },
+      { id: 2, color: '#00FF00', isSelected: false },
+      { id: 3, color: '#0000FF', isSelected: false },
+      { id: 4, color: '#FFFF00', isSelected: false },
+      { id: 5, color: '#FF00FF', isSelected: false },
+      { id: 6, color: '#00FFFF', isSelected: false },
+      { id: 7, color: '#800000', isSelected: false },
+      { id: 8, color: '#008000', isSelected: false },
+      { id: 9, color: '#000080', isSelected: false },
+      { id: 10, color: '#808080', isSelected: false },
     ],
     isFreeDelivery: true,
     rate: 4.8,
@@ -91,24 +84,24 @@ const initialState = [
     id: 2,
     amazingTime: '',
     models: [
-      { id: 1, img: model21, isExistBasket: true },
-      { id: 2, img: model22, isExistBasket: false },
-      { id: 3, img: model23, isExistBasket: false },
-      { id: 4, img: model24, isExistBasket: true },
+      { id: 1, img: model2 },
+      { id: 2, img: model3 },
+      { id: 3, img: model4 },
+      { id: 4, img: model1 },
     ],
     title: 'کراپ تاپ استین بلند زنانه',
     upcomingProduct: false,
     brandPalettes: [
-      { id: 1, color: '#FF0000', isExistBasket: true, isSelected: true },
-      { id: 2, color: '#00FF00', isExistBasket: false, isSelected: false },
-      { id: 3, color: '#0000FF', isExistBasket: true, isSelected: false },
-      { id: 4, color: '#FFFF00', isExistBasket: false, isSelected: false },
-      { id: 5, color: '#FF00FF', isExistBasket: true, isSelected: false },
-      { id: 6, color: '#00FFFF', isExistBasket: false, isSelected: false },
-      { id: 7, color: '#800000', isExistBasket: true, isSelected: false },
-      { id: 8, color: '#008000', isExistBasket: false, isSelected: false },
-      { id: 9, color: '#000080', isExistBasket: true, isSelected: false },
-      { id: 10, color: '#808080', isExistBasket: false, isSelected: false },
+      { id: 1, img: circle1, color: '', isSelected: true },
+      { id: 2, img: circle2, color: '', isSelected: false },
+      { id: 3, img: circle3, color: '', isSelected: false },
+      { id: 4, img: circle4, color: '', isSelected: false },
+      { id: 5, img: circle5, color: '#FF00FF', isSelected: false },
+      { id: 6, color: '#00FFFF', isSelected: false },
+      { id: 7, color: '#800000', isSelected: false },
+      { id: 8, color: '#008000', isSelected: false },
+      { id: 9, color: '#000080', isSelected: false },
+      { id: 10, color: '#808080', isSelected: false },
     ],
     isFreeDelivery: false,
     rate: 4.8,
@@ -158,10 +151,10 @@ const initialState = [
     id: 3,
     amazingTime: '',
     models: [
-      { id: 1, img: model31, isExistBasket: false },
-      { id: 2, img: model32, isExistBasket: true },
-      { id: 3, img: model33, isExistBasket: true },
-      { id: 4, img: model34, isExistBasket: false },
+      { id: 1, img: model3 },
+      { id: 2, img: model4 },
+      { id: 3, img: model1 },
+      { id: 4, img: model2 },
     ],
     title: 'کراپ تاپ آستین بلند زنانه',
     upcomingProduct: true,
@@ -176,24 +169,24 @@ const initialState = [
     id: 4,
     amazingTime: '02:24:36',
     models: [
-      { id: 1, img: model41, isExistBasket: true },
-      { id: 2, img: model42, isExistBasket: true },
-      { id: 3, img: model43, isExistBasket: false },
-      { id: 4, img: model44, isExistBasket: true },
+      { id: 1, img: model4 },
+      { id: 2, img: model1 },
+      { id: 3, img: model2 },
+      { id: 4, img: model3 },
     ],
     title: 'کراپ آستین بلند زنانه ماییلدا مدل 437-4423 رنگ مشکی ...',
     upcomingProduct: false,
     brandPalettes: [
-      { id: 1, color: '#FF0000', isExistBasket: true, isSelected: true },
-      { id: 2, color: '#00FF00', isExistBasket: false, isSelected: false },
-      { id: 3, color: '#0000FF', isExistBasket: true, isSelected: false },
-      { id: 4, color: '#FFFF00', isExistBasket: false, isSelected: false },
-      { id: 5, color: '#FF00FF', isExistBasket: true, isSelected: false },
-      { id: 6, color: '#00FFFF', isExistBasket: false, isSelected: false },
-      { id: 7, color: '#800000', isExistBasket: true, isSelected: false },
-      { id: 8, color: '#008000', isExistBasket: false, isSelected: false },
-      { id: 9, color: '#000080', isExistBasket: true, isSelected: false },
-      { id: 10, color: '#808080', isExistBasket: false, isSelected: false },
+      { id: 1, color: '#FF0000', isSelected: true },
+      { id: 2, color: '#00FF00', isSelected: false },
+      { id: 3, color: '#0000FF', isSelected: false },
+      { id: 4, color: '#FFFF00', isSelected: false },
+      { id: 5, color: '#FF00FF', isSelected: false },
+      { id: 6, color: '#00FFFF', isSelected: false },
+      { id: 7, color: '#800000', isSelected: false },
+      { id: 8, color: '#008000', isSelected: false },
+      { id: 9, color: '#000080', isSelected: false },
+      { id: 10, color: '#808080', isSelected: false },
     ],
     isFreeDelivery: true,
     rate: 4.8,

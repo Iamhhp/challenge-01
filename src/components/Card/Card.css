@@ -87,8 +87,8 @@
     }
 
     .btn-add-basket {
-      width: 2.8rem;
-      height: 2.8rem;
+      width: 3rem;
+      height: 3rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -103,8 +103,8 @@
       background-color: white;
 
       .icon {
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 2rem;
+        height: 2rem;
       }
     }
   }
@@ -163,7 +163,7 @@
       justify-content: flex-start;
       align-items: center;
 
-      font-family: 'Yekan Bakh NoEn';
+      font-family: 'YekanBakhNoEn-SemiBold';
       font-style: normal;
       font-weight: 600;
       font-size: 1.1rem;
@@ -204,6 +204,13 @@
           margin-left: 0.6rem;
           border-radius: 2rem;
           border: 0.1rem solid #c8c8c8;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border: none;
+          }
         }
 
         .palette-active {

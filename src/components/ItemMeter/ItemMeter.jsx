@@ -7,7 +7,7 @@ import { addProductItemBasket } from '../../context/dataProductsBasketSlice';
 import { useSelector } from 'react-redux';
 import { addNotificationError, addNotificationMsg } from '../../context/dataNotificationSlice';
 
-const ItemMeter = ({ setIsShowItemMeter, idProductSelected, idModelColorSelected, idColorSizeSelected, number, stock }) => {
+const ItemMeter = ({ setIsShowItemMeter, idProductSelected, idBrandPaletteSelected, idModelColorSelected, idColorSizeSelected, number, stock }) => {
   const dataProductSelected = useSelector((state) => state.dataProducts.find((product) => product.id === idProductSelected));
   const optionMeter = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
   const elementInputNumber = useRef(null);
@@ -39,11 +39,7 @@ const ItemMeter = ({ setIsShowItemMeter, idProductSelected, idModelColorSelected
     elementItemMeter.current.classList.remove('show');
     window.setTimeout(() => {
       setIsShowItemMeter(() => '');
-    }, 400);
-  };
-
-  const clickHandlerOptionNumber = (e) => {
-    elementInputNumber.current.value = e.target.innerText;
+    }, 200);
   };
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -57,7 +53,7 @@ const ItemMeter = ({ setIsShowItemMeter, idProductSelected, idModelColorSelected
   };
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //#region clickHandler btnConfirmItem & BtnDelITem
+  //#region Function Handler Select Number Of Product Selected
   const clickHandlerBtnConfirm = (e) => {
     const inputNumberItemMeter = Number(e.target.previousElementSibling.value);
     if (!inputNumberItemMeter) {
@@ -68,7 +64,7 @@ const ItemMeter = ({ setIsShowItemMeter, idProductSelected, idModelColorSelected
       return;
     }
 
-    changeItemBasket(addProductItemBasket({ idProductSelected, idModelColorSelected, idColorSizeSelected, inputNumberItemMeter, dataProductSelected }));
+    changeItemBasket(addProductItemBasket({ idProductSelected, idBrandPaletteSelected, idModelColorSelected, idColorSizeSelected, inputNumberItemMeter, dataProductSelected }));
     clickHandlerHideMenu({ target: { className: 'btn-close' }, stopPropagation: () => {} });
   };
 
@@ -78,7 +74,14 @@ const ItemMeter = ({ setIsShowItemMeter, idProductSelected, idModelColorSelected
       return;
     }
 
-    changeItemBasket(addProductItemBasket({ idProductSelected, idModelColorSelected, idColorSizeSelected, inputNumberItemMeter, dataProductSelected }));
+    changeItemBasket(addProductItemBasket({ idProductSelected, idBrandPaletteSelected, idModelColorSelected, idColorSizeSelected, inputNumberItemMeter, dataProductSelected }));
+    clickHandlerHideMenu({ target: { className: 'btn-close' }, stopPropagation: () => {} });
+  };
+
+  const clickHandlerOptionNumber = (e) => {
+    const inputNumberItemMeter = Number(e.target.innerText);
+
+    changeItemBasket(addProductItemBasket({ idProductSelected, idBrandPaletteSelected, idModelColorSelected, idColorSizeSelected, inputNumberItemMeter, dataProductSelected }));
     clickHandlerHideMenu({ target: { className: 'btn-close' }, stopPropagation: () => {} });
   };
 

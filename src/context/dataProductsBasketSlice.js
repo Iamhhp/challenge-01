@@ -5,10 +5,10 @@ const initialState = [
   //   id: 1,
   //   amazingTime: '',
   //   models: [
-  //     // { id: 1, img: model11, isExistBasket: true },
-  //     // { id: 2, img: model12, isExistBasket: false },
-  //     // { id: 3, img: model13, isExistBasket: false },
-  //     // { id: 4, img: model14, isExistBasket: true },
+  //     // { id: 1, img: model11,  },
+  //     // { id: 2, img: model12,   },
+  //     // { id: 3, img: model13,   },
+  //     // { id: 4, img: model14,  },
   //   ],
   //   title: 'کراپ‌تاپ آستین بلند زنانه ماییلدا مدل 4423-437 رنگ مشکی ...',
   //   upcomingProduct: false,
@@ -41,7 +41,6 @@ const initialState = [
   //         { id: 4, size: 4, weight: 3.1, number: 0 },
   //         { id: 5, size: 5, weight: 3.1, number: 0 },
   //       ],
-  //     },
   //     {
   //       id: 2,
   //       name: 'رزگلد',
@@ -75,18 +74,24 @@ const dataProductsBasketSlice = createSlice({
   initialState,
   reducers: {
     addProductItemBasket: (state, action) => {
-      const { idProductSelected, idModelColorSelected, idColorSizeSelected, inputNumberItemMeter } = action.payload;
+      const { idProductSelected, idBrandPaletteSelected, idModelColorSelected, idColorSizeSelected, inputNumberItemMeter } = action.payload;
       const dataProductsBasket = JSON.parse(JSON.stringify(state));
 
-      const indexOfProductSelected = dataProductsBasket.findIndex((product) => product.id === idProductSelected);
-      const dataProductSelected = indexOfProductSelected === -1 ? JSON.parse(JSON.stringify(action.payload.dataProductSelected)) : dataProductsBasket[indexOfProductSelected];
-      dataProductSelected.modelsColoring.forEach((modelColor, indexModel) => {
+      const indexOfProductSelectedInBasket = dataProductsBasket.findIndex((product) => product.id === idProductSelected);
+      const dataProductSelected = indexOfProductSelectedInBasket === -1 ? JSON.parse(JSON.stringify(action.payload.dataProductSelected)) : dataProductsBasket[indexOfProductSelectedInBasket];
+      dataProductSelected.modelsColoring.some((modelColor, indexModel) => {
         if (modelColor.id === idModelColorSelected) {
-          modelColor.colorSizing.forEach((colorSize, indexColor) => {
+          modelColor.colorSizing.some((colorSize, indexColor) => {
             if (colorSize.id === idColorSizeSelected) {
               dataProductSelected.modelsColoring[indexModel].colorSizing[indexColor].number = inputNumberItemMeter;
+              return true;
+            } else {
+              return false;
             }
           });
+          return true;
+        } else {
+          return false;
         }
       });
 
@@ -96,13 +101,23 @@ const dataProductsBasketSlice = createSlice({
       });
 
       if (isExistInBasketStill) {
-        if (indexOfProductSelected === -1) {
+        // isExistBrandPalette => true;
+        dataProductSelected.brandPalettes.some((brandPalette) => {
+          if (brandPalette.id === idBrandPaletteSelected) {
+            brandPalette.isExistBasket = true;
+            return true;
+          } else {
+            return false;
+          }
+        });
+
+        if (indexOfProductSelectedInBasket === -1) {
           dataProductsBasket.push(dataProductSelected);
         } else {
-          dataProductsBasket[indexOfProductSelected] = dataProductSelected;
+          dataProductsBasket[indexOfProductSelectedInBasket] = dataProductSelected;
         }
       } else {
-        dataProductsBasket.splice(indexOfProductSelected);
+        dataProductsBasket.splice(indexOfProductSelectedInBasket);
       }
 
       return dataProductsBasket;

@@ -3,7 +3,7 @@
     /* width: 360px; */
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding-right: 1.6rem;
   }
 }
