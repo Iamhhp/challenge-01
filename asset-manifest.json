@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/challenge-01/static/css/main.e3aff7f5.css",
-    "main.js": "/challenge-01/static/js/main.12aa7a3d.js",
+    "main.css": "/challenge-01/static/css/main.f1156552.css",
+    "main.js": "/challenge-01/static/js/main.571d0a51.js",
     "static/media/circle-3.png": "/challenge-01/static/media/circle-3.4bf64989478f244c4dc9.png",
     "static/media/circle-4.png": "/challenge-01/static/media/circle-4.95e7fd1d7544174f0463.png",
     "static/media/circle-1.png": "/challenge-01/static/media/circle-1.868ece78288d7f49d827.png",
@@ -12,24 +12,26 @@
     "static/media/model-4.png": "/challenge-01/static/media/model-4.81105a61a34598dbfd78.png",
     "static/media/model-2.png": "/challenge-01/static/media/model-2.ef74bc170af8c66eb5a0.png",
     "static/media/YekanBakhNoEn-Bold.ttf": "/challenge-01/static/media/YekanBakhNoEn-Bold.c8b200cf283e64dd38ac.ttf",
+    "static/media/YekanBakhFaNum-Regular.ttf": "/challenge-01/static/media/YekanBakhFaNum-Regular.26385d0b2899293e3304.ttf",
     "static/media/YekanBakhFaNum-Bold.ttf": "/challenge-01/static/media/YekanBakhFaNum-Bold.f7616c7e23bd100c64d2.ttf",
     "static/media/YekanBakhFaNum-SemiBold.ttf": "/challenge-01/static/media/YekanBakhFaNum-SemiBold.0553b5d9b9bf1260775b.ttf",
     "static/media/YekanBakhNoEn-Regular.ttf": "/challenge-01/static/media/YekanBakhNoEn-Regular.ac1f06ee3df5aa5b0992.ttf",
     "static/media/YekanBakhNoEn-SemiBold.ttf": "/challenge-01/static/media/YekanBakhNoEn-SemiBold.77ce5e62b692c78079ce.ttf",
     "static/media/YekanBakhFaNum-Bold.woff": "/challenge-01/static/media/YekanBakhFaNum-Bold.b8977a5a5772c1fa41e9.woff",
     "static/media/YekanBakhFaNum-SemiBold.woff": "/challenge-01/static/media/YekanBakhFaNum-SemiBold.938bcaab577a929b2de3.woff",
+    "static/media/YekanBakhFaNum-Regular.woff": "/challenge-01/static/media/YekanBakhFaNum-Regular.1768f515255e2457ee3c.woff",
     "static/media/YekanBakhNoEn-Bold.woff": "/challenge-01/static/media/YekanBakhNoEn-Bold.44781342f1846b9b32fd.woff",
     "static/media/YekanBakhNoEn-SemiBold.woff": "/challenge-01/static/media/YekanBakhNoEn-SemiBold.8740310eb010eadabf54.woff",
     "static/media/YekanBakhNoEn-Regular.woff": "/challenge-01/static/media/YekanBakhNoEn-Regular.b3cac865942a8a5335f9.woff",
     "static/media/YekanBakhFaNum-Bold.woff2": "/challenge-01/static/media/YekanBakhFaNum-Bold.8fed1b2b2eca9a665406.woff2",
     "static/media/YekanBakhFaNum-SemiBold.woff2": "/challenge-01/static/media/YekanBakhFaNum-SemiBold.4401f479ad7c85630d2b.woff2",
+    "static/media/YekanBakhFaNum-Regular.woff2": "/challenge-01/static/media/YekanBakhFaNum-Regular.887e70856da9c35f9425.woff2",
     "static/media/iconColorYellow.svg": "/challenge-01/static/media/iconColorYellow.de2f83f021af21089981dd887026e345.svg",
     "static/media/iconColorPurple.svg": "/challenge-01/static/media/iconColorPurple.ec2921067ca4058f99d417d4d7dad4c4.svg",
     "static/media/YekanBakhNoEn-Bold.woff2": "/challenge-01/static/media/YekanBakhNoEn-Bold.0914dd4179b43315f6ba.woff2",
     "static/media/YekanBakhNoEn-SemiBold.woff2": "/challenge-01/static/media/YekanBakhNoEn-SemiBold.8df5174c26809165f3b1.woff2",
     "static/media/YekanBakhNoEn-Regular.woff2": "/challenge-01/static/media/YekanBakhNoEn-Regular.10db0b4d2193bedfffdf.woff2",
     "static/media/iconColorWhite.svg": "/challenge-01/static/media/iconColorWhite.0c61e81868107b25df7e1de5863667cb.svg",
-    "static/media/bag-2.svg": "/challenge-01/static/media/bag-2.4d7bf9a33fef5074daaa836daf8906f7.svg",
     "static/media/iconDel-En.svg": "/challenge-01/static/media/iconDel-En.78263a963994abb674811e7c9f3d59fd.svg",
     "static/media/timer.svg": "/challenge-01/static/media/timer.fcf1da631c6b9e364878cb58883f0c5c.svg",
     "static/media/delivery.svg": "/challenge-01/static/media/delivery.fda44b6e3fad39242313f2e468c5f0c4.svg",
@@ -39,16 +41,17 @@
     "static/media/iconDel-Dis.svg": "/challenge-01/static/media/iconDel-Dis.cfc61d96a535ae0017c2a018048ce918.svg",
     "static/media/eva_plus-outline.svg": "/challenge-01/static/media/eva_plus-outline.c51915c159be0fcc23d547fd1ff1fc5c.svg",
     "static/media/add-basket.svg": "/challenge-01/static/media/add-basket.3d123d427c2d4f7e5b0a016fab788c9a.svg",
+    "static/media/bag-2.svg": "/challenge-01/static/media/bag-2.4268f6d28e5091a2f0de8decfd544a4e.svg",
     "index.html": "/challenge-01/index.html",
     "static/media/home-2.svg": "/challenge-01/static/media/home-2.d60a8efb652bf6a7b81a43d9663b1a27.svg",
     "static/media/more.svg": "/challenge-01/static/media/more.815ccf3bd27b72a741391eb33b66f1c7.svg",
     "static/media/search-normal.svg": "/challenge-01/static/media/search-normal.6b040569afce24983044561e7fc03f8f.svg",
     "static/media/arrow-right.svg": "/challenge-01/static/media/arrow-right.42812423dad1db8d7cf3f177eb85c158.svg",
-    "main.e3aff7f5.css.map": "/challenge-01/static/css/main.e3aff7f5.css.map",
-    "main.12aa7a3d.js.map": "/challenge-01/static/js/main.12aa7a3d.js.map"
+    "main.f1156552.css.map": "/challenge-01/static/css/main.f1156552.css.map",
+    "main.571d0a51.js.map": "/challenge-01/static/js/main.571d0a51.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3aff7f5.css",
-    "static/js/main.12aa7a3d.js"
+    "static/css/main.f1156552.css",
+    "static/js/main.571d0a51.js"
   ]
 }
