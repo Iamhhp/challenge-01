@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 
 const Header = () => {
   const notification = useSelector((state) => state.dataNotification);
+  const numberProductBasket = useSelector((state) => state.dataProductsBasket.length);
 
   return (
     <header>
@@ -37,6 +38,7 @@ const Header = () => {
             <li>
               <a href='' className='basket'>
                 <img src={iconBasket} alt='' />
+                {numberProductBasket !== 0 && <div className='number-exist-basket'>{numberProductBasket}</div>}
               </a>
             </li>
 

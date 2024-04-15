@@ -18,10 +18,6 @@ const Card = ({ id: idProductSelected, amazingTime, models, title, upcomingProdu
   const [isShowMenuProduct, setIsShowMenuProduct] = useState(false);
 
   const clickHandlerAddProductBasket = () => {
-    if (upcomingProduct) {
-      return;
-    }
-
     setIsShowMenuProduct(() => true);
   };
 
@@ -55,9 +51,11 @@ const Card = ({ id: idProductSelected, amazingTime, models, title, upcomingProdu
             })}
           </Swiper>
 
-          <div className='btn-add-basket' onClick={clickHandlerAddProductBasket}>
-            <img src={iconAddBasket} alt='' className='icon' />
-          </div>
+          {!upcomingProduct && (
+            <div className='btn-add-basket' onClick={clickHandlerAddProductBasket}>
+              <img src={iconAddBasket} alt='' className='icon' />
+            </div>
+          )}
         </div>
 
         <h3 className='title'>{title}</h3>

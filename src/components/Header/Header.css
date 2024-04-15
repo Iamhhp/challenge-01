@@ -38,7 +38,41 @@
     ul {
       li {
         a {
-          padding-left: 1.6rem;
+          margin-left: 1.6rem;
+        }
+
+        .basket {
+          position: relative;
+
+          .number-exist-basket {
+            width: 1.6rem;
+            height: 1.6rem;
+
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+
+            font-family: 'YekanBakhFaNum-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            color: #ffffff;
+
+            padding: 0rem 0.6rem;
+            border-radius: 50%;
+            background: #ed2e7e;
+
+            /* Frame 16 */
+
+            position: absolute;
+            top: 1.6rem;
+            left: 1.2rem;
+
+            background: #ed2e7e;
+            border-radius: 30px;
+          }
         }
       }
     }

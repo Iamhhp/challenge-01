@@ -20,17 +20,24 @@
 }
 
 @font-face {
-  font-family: 'YekanBakhFaNum-Bold';
-  src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff2/YekanBakhFaNum-Bold.woff2) format('woff2'),
-    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff/YekanBakhFaNum-Bold.woff) format('woff'),
-    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/TTF/YekanBakhFaNum-Bold.ttf) format('ttf');
-}
-
-@font-face {
   font-family: 'YekanBakhNoEn-Bold';
   src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/Webfonts/fonts/woff2/YekanBakhNoEn-Bold.woff2) format('woff2'),
     url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/Webfonts/fonts/woff/YekanBakhNoEn-Bold.woff) format('woff'),
     url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhNoEn/TTF/YekanBakhNoEn-Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum-Regular';
+  src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff2/YekanBakhFaNum-Regular.woff2) format('woff2'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff/YekanBakhFaNum-Regular.woff) format('woff'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/TTF/YekanBakhFaNum-Regular.ttf) format('TrueTypeFont');
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum-Bold';
+  src: url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff2/YekanBakhFaNum-Bold.woff2) format('woff2'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/Webfonts/fonts/woff/YekanBakhFaNum-Bold.woff) format('woff'),
+    url(./assets/fonts/YekanBakh-Pro-2.3/Pro/YekanBakhFaNum/TTF/YekanBakhFaNum-Bold.ttf) format('ttf');
 }
 
 * {

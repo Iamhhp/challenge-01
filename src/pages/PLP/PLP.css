@@ -4,6 +4,6 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding-right: 1.6rem;
+    padding: 1.6rem 1.6rem 3.1rem 0rem;
   }
 }

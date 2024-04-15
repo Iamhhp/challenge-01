@@ -1,10 +1,12 @@
 .card {
   width: 15.6rem;
   height: 37.1rem;
+  flex-grow: 1;
+
   padding: 0.4rem;
   border-radius: 0.6rem;
 
-  margin: 0.5rem 0rem;
+  margin-bottom: 0.4rem;
   margin-left: 1.6rem;
 
   .amazing-time {
@@ -46,7 +48,7 @@
     position: relative;
 
     .my-swiper-models {
-      width: 14.8rem;
+      /* width: 14.8rem; */
       height: 20rem;
       border-radius: 0.6rem;
 
@@ -87,8 +89,11 @@
     }
 
     .btn-add-basket {
+      /* width: 2.8rem; */
       width: 3rem;
+      /* height: 2.8rem; */
       height: 3rem;
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -96,21 +101,25 @@
       position: absolute;
       right: 0.8rem;
       bottom: 0.8rem;
-      border-radius: 50%;
       z-index: 1;
 
       cursor: pointer;
-      background-color: white;
+
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0px 0px 0.8rem rgba(0, 0, 0, 0.16);
 
       .icon {
+        /* width: 1.8rem; */
         width: 2rem;
+        /* height: 1.8rem; */
         height: 2rem;
       }
     }
   }
 
   .title {
-    width: 14.8rem;
+    /* width: 14.8rem; */
     height: 3.4rem;
 
     font-family: 'YekanBakhNoEn-SemiBold';
