@@ -48,9 +48,5 @@
 
 html {
   /* font-size root => 16px*0.625 = 10px */
-  font-size: 62.5%;
-}
-
-body {
-  /* width: 100vw; */
+  font-size: calc(100vw * 0.0277777777777778);
 }
