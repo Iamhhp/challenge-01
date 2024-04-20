@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/challenge-01/static/css/main.c901e3c5.css",
-    "main.js": "/challenge-01/static/js/main.571d0a51.js",
+    "main.css": "/challenge-01/static/css/main.f5f27868.css",
+    "main.js": "/challenge-01/static/js/main.4e4b69fe.js",
     "static/media/circle-3.png": "/challenge-01/static/media/circle-3.4bf64989478f244c4dc9.png",
     "static/media/circle-4.png": "/challenge-01/static/media/circle-4.95e7fd1d7544174f0463.png",
     "static/media/circle-1.png": "/challenge-01/static/media/circle-1.868ece78288d7f49d827.png",
@@ -47,11 +47,11 @@
     "static/media/more.svg": "/challenge-01/static/media/more.815ccf3bd27b72a741391eb33b66f1c7.svg",
     "static/media/search-normal.svg": "/challenge-01/static/media/search-normal.6b040569afce24983044561e7fc03f8f.svg",
     "static/media/arrow-right.svg": "/challenge-01/static/media/arrow-right.42812423dad1db8d7cf3f177eb85c158.svg",
-    "main.c901e3c5.css.map": "/challenge-01/static/css/main.c901e3c5.css.map",
-    "main.571d0a51.js.map": "/challenge-01/static/js/main.571d0a51.js.map"
+    "main.f5f27868.css.map": "/challenge-01/static/css/main.f5f27868.css.map",
+    "main.4e4b69fe.js.map": "/challenge-01/static/js/main.4e4b69fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.c901e3c5.css",
-    "static/js/main.571d0a51.js"
+    "static/css/main.f5f27868.css",
+    "static/js/main.4e4b69fe.js"
   ]
 }
