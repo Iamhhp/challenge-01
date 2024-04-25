@@ -26,6 +26,7 @@ const MenuProductSizingColor = ({ idProductSelected, setIsShowMenuProduct }) => 
   // #region Auto Show-MenuProduct in First Rending
   useEffect(() => {
     const timerId = window.setTimeout(() => {
+      document.documentElement.style.overflow = 'hidden';
       elementMenuSizing.current?.classList.add('show');
       elementOverlay.current?.classList.add('show');
     }, 10);
@@ -44,6 +45,7 @@ const MenuProductSizingColor = ({ idProductSelected, setIsShowMenuProduct }) => 
       return;
     }
 
+    document.documentElement.style.overflow = '';
     elementMenuSizing.current.classList.remove('show');
     elementOverlay.current.classList.remove('show');
     window.setTimeout(() => {

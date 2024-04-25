@@ -5,11 +5,20 @@ import iconHome from './../../assets/icons/home-2.svg';
 import iconMore from './../../assets/icons/more.svg';
 import iconSearch from './../../assets/icons/search-normal.svg';
 import Notification from '../Notification/Notification';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { addNotificationMsg } from '../../context/dataNotificationSlice';
 
 const Header = () => {
+  const setNotification = useDispatch();
   const notification = useSelector((state) => state.dataNotification);
   const numberProductBasket = useSelector((state) => state.dataProductsBasket.length);
+
+  useEffect(() => {
+    window.setTimeout(() => {
+      setNotification(addNotificationMsg('طرح first-mobile در ابعاد تلفن همراه بازدید شود.'));
+    }, 2000);
+  }, []);
 
   return (
     <header>
