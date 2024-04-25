@@ -44,9 +44,11 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 html {
   /* font-size root => 16px*0.625 = 10px */
-  font-size: calc(100vw * 0.0277777777777778);
+  font-size: calc(100vw * 0.0274);
 }
